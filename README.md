@@ -14,10 +14,10 @@ Real dashboards, built for different kinds of businesses — each one a genuine 
 
 | Project | What It Solves |
 |---|---|
-| [📈 Retail Performance Dashboard](projects/retail-dashboard/README.md) | Which products and categories are actually driving the business |
-| [🏡 Real Estate — Leads and Regions](projects/real-estate-dashboard/README.md) | Which lead sources are actually worth paying for |
-| [🛠️ Service Business — Forecast and Lifetime Value](projects/service-dashboard/README.md) | Which services and clients are the most valuable |
-| [💳 Subscription — Retention and Acquisition](projects/subscription-dashboard/README.md) | Whether marketing spend is producing customers who stay |
+| [📈 Retail Performance Dashboard](projects/Retail-Performance-Dashboard/README.md) | Which products and categories are actually driving the business |
+| [🏡 Real Estate — Leads and Regions](projects/Real-Estate-Dashboard/README.md) | Which lead sources are actually worth paying for |
+| [🛠️ Service Business — Forecast and Lifetime Value](projects/Service-Business-Dashboard/README.md) | Which services and clients are the most valuable |
+| [💳 Subscription — Retention and Acquisition](projects/Subscription-Business-Dashboard/README.md) | Whether marketing spend is producing customers who stay |
 
 Every dashboard connects to real data sources automatically and refreshes on a schedule — no manual spreadsheet work. The specific metrics change by industry; the underlying pipeline doesn't.
 
