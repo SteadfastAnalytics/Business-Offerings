@@ -14,7 +14,7 @@ Real examples, built for different kinds of businesses — same underlying pipel
 
 ### 📈 Retail
 
-![Retail Performance Dashboard](images/retail-dashboard.png)
+![Retail Performance Dashboard](retail-dashboard.png)
 
 Revenue, profit margin, and order volume at a glance, with revenue broken down by month, by product category, and by individual product — so it's immediately clear what's actually driving the business, not just that sales happened.
 
@@ -26,13 +26,13 @@ Lead spend and cost-per-lead next to closed deals by lead source — so it's cle
 
 ### 🛠️ Service / Agency
 
-![Service Business Forecast and Lifetime Value Dashboard](images/service-dashboard.png)
+![Service Business Forecast and Lifetime Value Dashboard](service-dashboard.png)
 
 Client lifetime value and active engagements alongside a revenue forecast with a confidence band — plus contract value broken out by service line, showing which offerings are actually worth the most per client.
 
 ### 💳 Subscription Business
 
-![Subscription Retention and Acquisition Dashboard](images/subscription-dashboard.png)
+![Subscription Retention and Acquisition Dashboard](subscription-dashboard.png)
 
 Churn rate tracked monthly against marketing spend by channel — so it's clear whether acquisition spending is actually translating into retained, paying customers, not just new signups.
 
