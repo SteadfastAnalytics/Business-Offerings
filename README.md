@@ -20,7 +20,7 @@ Revenue, profit margin, and order volume at a glance, with revenue broken down b
 
 ### 🏡 Real Estate
 
-![Real Estate Leads and Regions Dashboard](images/real-estate-dashboard.png)
+![Real Estate Leads and Regions Dashboard](real-estate-dashboard.png)
 
 Lead spend and cost-per-lead next to closed deals by lead source — so it's clear which lead sources are actually worth paying for, not just generating volume. Commission by region and a days-on-market trend round out the picture.
 
