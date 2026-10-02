@@ -70,7 +70,7 @@ Not ready for an ongoing relationship? A standalone dashboard built from a one-t
 
 **Email:** [steadfastbi@gmail.com](mailto:steadfastbi@gmail.com)
 
-**Response time:** Within 1 business day
+**Response time:** Within 2 business day
 
 Tell me a bit about your business and what you're hoping to track, and we'll find the right fit.
 
