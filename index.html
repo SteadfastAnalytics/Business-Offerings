@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steadfast Business Analytics — Data Solutions for Small Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --off-white:#F7F5F2;
+    --off-white-2:#F0EDE8;
+    --charcoal:#3A3A3A;
+    --charcoal-soft:#6B6B6B;
+    --black:#0D0D0D;
+    --gold:#B08D57;
+    --gold-soft:#D9C7A3;
+    --line: rgba(13,13,13,0.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--off-white);
+    color:var(--black);
+    font-family:'Inter', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--black);
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(247,245,242,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex; align-items:center; justify-content:space-between; padding:20px 32px;}
+  .logo{display:flex; align-items:center; gap:10px; font-family:'Fraunces',serif; font-weight:600; font-size:19px;}
+  .logo-mark{
+    width:22px; height:22px; border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--gold-soft), var(--gold) 55%, var(--charcoal) 100%);
+    box-shadow: 0 0 14px 2px rgba(176,141,87,0.55);
+    flex-shrink:0;
+  }
+  .nav-links{display:flex; gap:36px; font-size:14px; font-weight:500;}
+  .nav-links a{opacity:0.75; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    font-size:13px; font-weight:600; padding:10px 20px;
+    background:var(--black); color:var(--off-white); border-radius:2px;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--charcoal);}
+  @media(max-width:760px){ .nav-links{display:none;} }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:140px 32px 120px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .light-sweep{
+    position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+    width:1400px; height:1400px;
+    background: conic-gradient(from 200deg at 50% 50%,
+      transparent 0deg, rgba(176,141,87,0.16) 8deg, transparent 20deg, transparent 360deg);
+    animation: sweep 7s linear infinite;
+    pointer-events:none;
+  }
+  @keyframes sweep{ from{transform:translateX(-50%) rotate(0deg);} to{transform:translateX(-50%) rotate(360deg);} }
+  .eyebrow{
+    display:inline-block; font-size:12px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold); font-weight:600; margin-bottom:22px; position:relative;
+  }
+  .hero h1{
+    font-size:clamp(38px, 6vw, 68px); line-height:1.05; max-width:820px; margin:0 auto 24px;
+    position:relative;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold);}
+  .hero p{
+    font-size:18px; color:var(--charcoal); max-width:560px; margin:0 auto 40px; line-height:1.6;
+    position:relative;
+  }
+  .hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; position:relative;}
+  .availability-badge{
+    display:inline-flex; align-items:center; gap:8px; margin-top:28px;
+    background:var(--off-white-2); border:1px solid var(--gold); border-radius:100px;
+    padding:9px 20px; font-size:13px; font-weight:600; color:var(--charcoal); position:relative;
+  }
+  .availability-badge .dot{
+    width:7px; height:7px; border-radius:50%; background:var(--gold);
+    box-shadow:0 0 0 3px rgba(176,141,87,0.25);
+  }
+  .btn-primary{
+    background:var(--black); color:var(--off-white); padding:15px 30px; font-size:14px; font-weight:600;
+    border-radius:2px; transition:transform .2s, background .2s; display:inline-block;
+  }
+  .btn-primary:hover{background:var(--charcoal); transform:translateY(-1px);}
+  .btn-secondary{
+    border:1px solid var(--charcoal); color:var(--black); padding:15px 30px; font-size:14px; font-weight:600;
+    border-radius:2px; transition:border-color .2s; display:inline-block;
+  }
+  .btn-secondary:hover{border-color:var(--black);}
+
+  /* FOUNDATIONS CALLOUT */
+  .foundations{padding:56px 0 0;}
+  .foundations-box{
+    background:var(--black); color:var(--off-white); border-radius:6px;
+    padding:36px 40px; display:flex; align-items:center; justify-content:space-between; gap:32px;
+    flex-wrap:wrap;
+  }
+  .foundations-text{max-width:560px;}
+  .foundations-eyebrow{font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold-soft); font-weight:600; margin-bottom:10px; display:block;}
+  .foundations-box h3{color:var(--off-white); font-size:22px; margin-bottom:10px;}
+  .foundations-box p{font-size:14.5px; color:rgba(247,245,242,0.7); line-height:1.6;}
+  .foundations-price{
+    flex-shrink:0; text-align:right;
+  }
+  .foundations-price .amount{font-family:'Fraunces',serif; font-size:28px; font-weight:600; color:var(--off-white); display:block;}
+  .foundations-price .note{font-size:12px; color:rgba(247,245,242,0.5); margin-bottom:14px; display:block;}
+  .foundations-price a{
+    display:inline-block; background:var(--off-white); color:var(--black); padding:12px 24px;
+    font-size:13px; font-weight:600; border-radius:2px; transition:background .2s;
+  }
+  .foundations-price a:hover{background:var(--gold-soft);}
+  @media(max-width:640px){
+    .foundations-box{flex-direction:column; align-items:flex-start; text-align:left;}
+    .foundations-price{text-align:left; width:100%;}
+  }
+
+  /* SECTION HEADERS */
+  .section-label{
+    font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold);
+    font-weight:600; margin-bottom:14px; display:block;
+  }
+  .section-title{font-size:clamp(28px,4vw,40px); margin-bottom:16px; max-width:600px;}
+  .section-sub{color:var(--charcoal-soft); font-size:16px; max-width:560px; line-height:1.6; margin-bottom:56px;}
+
+  /* TIERS */
+  .tiers{padding:100px 0 110px;}
+  .tier-grid{display:flex; justify-content:center; max-width:420px; margin:0 auto;}
+  .addon-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; max-width:980px; margin:32px auto 0;}
+  @media(max-width:900px){.addon-grid{grid-template-columns:1fr; max-width:420px;}}
+  .addon-card{background:var(--off-white-2); border:1px solid var(--charcoal-soft); border-radius:8px; padding:20px;}
+  .addon-card h4{font-size:15px; font-weight:600; margin-bottom:10px; color:var(--black);}
+  .addon-card .addon-price{font-family:'Fraunces',serif; font-size:22px; font-weight:600; color:var(--gold); margin-bottom:6px;}
+  .addon-card .addon-note{font-size:12px; color:var(--charcoal-soft); font-style:italic;}
+  .tier-card{
+    background:var(--off-white); border:1px solid var(--line); border-radius:4px;
+    padding:36px 30px; display:flex; flex-direction:column; position:relative;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .tier-card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -20px rgba(13,13,13,0.18);}
+  .tier-card.featured{border-color:var(--black); border-width:1.5px;}
+  .badge{
+    position:absolute; top:-13px; left:30px; background:var(--black); color:var(--off-white);
+    font-size:11px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+    padding:5px 12px; border-radius:2px;
+  }
+  .tier-name{font-size:14px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--charcoal-soft); margin-bottom:10px;}
+  .tier-price{font-family:'Fraunces',serif; font-size:42px; font-weight:600; margin-bottom:6px;}
+  .tier-price span{font-family:'Inter',sans-serif; font-size:15px; font-weight:500; color:var(--charcoal-soft);}
+  .setup-fee{font-size:12.5px; color:var(--gold); font-weight:600; margin-bottom:18px;}
+  .tier-tagline{font-size:14px; color:var(--charcoal-soft); margin-bottom:26px; line-height:1.5; min-height:42px;}
+  .tier-list{list-style:none; margin-bottom:32px; flex-grow:1;}
+  .tier-list li{
+    font-size:14px; color:var(--charcoal); padding:10px 0; border-top:1px solid var(--line);
+    display:flex; gap:10px; align-items:flex-start; line-height:1.4;
+  }
+  .tier-list li:first-child{border-top:none;}
+  .tier-list li.included-note{font-weight:600; color:var(--black);}
+  .tier-list .dot{color:var(--gold); flex-shrink:0; margin-top:1px;}
+  .tier-btn{
+    text-align:center; padding:13px; font-size:13px; font-weight:600; border-radius:2px;
+    border:1px solid var(--black); color:var(--black); transition:all .2s;
+  }
+  .tier-card.featured .tier-btn{background:var(--black); color:var(--off-white);}
+  .tier-btn:hover{background:var(--black); color:var(--off-white);}
+
+  /* DASHBOARDS PREVIEW */
+  .dashboards{padding:100px 0 110px; background:var(--off-white-2);}
+  .dash-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px;}
+  @media(max-width:900px){.dash-grid{grid-template-columns:1fr;}}
+  .dash-card{
+    background:var(--off-white); border:1px solid var(--line); border-radius:4px; overflow:hidden;
+  }
+  .dash-preview{
+    width:100%; background:var(--off-white-2); position:relative; overflow:hidden;
+    border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    padding:28px 32px;
+  }
+  .dash-preview svg{
+    width:100%; height:auto; display:block;
+  }
+  .dash-preview img{
+    width:100%; height:auto; display:block; border-radius:2px;
+  }
+  .dash-case-link{
+    display:inline-block; margin-top:14px; font-size:13px; font-weight:600;
+    color:var(--gold); text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:1px;
+  }
+  .dash-case-link:hover{color:var(--black); border-color:var(--black);}
+  .dash-info{padding:24px 28px;}
+  .dash-info .tier-tag{font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-bottom:6px;}
+  .dash-info h4{font-family:'Fraunces',serif; font-size:19px; font-weight:600; margin-bottom:8px;}
+  .dash-info p{font-size:13.5px; color:var(--charcoal-soft); line-height:1.55;}
+  .swap-note{
+    text-align:center; margin-top:44px; font-size:13px; color:var(--charcoal-soft);
+    border:1px dashed var(--line); padding:14px 20px; border-radius:4px; max-width:560px; margin-left:auto; margin-right:auto;
+  }
+
+  /* CONTACT */
+  .contact{padding:110px 0 130px;}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr; gap:48px;}}
+  .contact-detail{display:flex; gap:16px; padding:18px 0; border-top:1px solid var(--line);}
+  .contact-detail:last-child{border-bottom:1px solid var(--line);}
+  .contact-detail .k{font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--charcoal-soft); width:90px; flex-shrink:0; padding-top:2px;}
+  .contact-detail .v{font-size:15px; font-weight:500;}
+  .contact-detail .v a{border-bottom:1px solid var(--gold); padding-bottom:1px;}
+  form{display:flex; flex-direction:column; gap:16px;}
+  label{font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--charcoal-soft); font-weight:600; margin-bottom:6px; display:block;}
+  input, textarea, select{
+    width:100%; background:var(--off-white-2); border:1px solid var(--line); border-radius:2px;
+    padding:12px 14px; font-family:'Inter',sans-serif; font-size:14px; color:var(--black);
+  }
+  input:focus, textarea:focus, select:focus{outline:2px solid var(--gold); outline-offset:1px; border-color:transparent;}
+  textarea{resize:vertical; min-height:100px;}
+  .submit-btn{
+    background:var(--black); color:var(--off-white); border:none; padding:14px; font-size:14px; font-weight:600;
+    border-radius:2px; cursor:pointer; margin-top:6px; transition:background .2s;
+  }
+  .submit-btn:hover{background:var(--charcoal);}
+
+  footer{border-top:1px solid var(--line); padding:32px; text-align:center; font-size:13px; color:var(--charcoal-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><span class="logo-mark"></span>Steadfast Business Analytics</div>
+    <div class="nav-links">
+      <a href="#tiers">Plans</a>
+      <a href="#dashboards">Dashboards</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="https://forms.gle/WMA2fJm6oS7oD7A6A" target="_blank" class="nav-cta">Book a call</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="light-sweep"></div>
+  <span class="eyebrow">Power BI Dashboards & Business Analytics</span>
+  <h1>See what's actually<br>happening in <em>your</em> business.</h1>
+  <p>Custom Power BI dashboards, built and maintained for small businesses that don't need a full-time analyst. Clean data, clear numbers, one place to look.</p>
+  <div class="hero-ctas">
+    <a href="#tiers" class="btn-primary">See plans & pricing</a>
+    <a href="https://forms.gle/WMA2fJm6oS7oD7A6A" target="_blank" class="btn-secondary">Book a free intro call</a>
+  </div>
+  <div style="display:flex; justify-content:center;">
+    <span class="availability-badge"><span class="dot"></span>Now booking intro calls — first clients starting by December 2026</span>
+  </div>
+</section>
+
+<section class="tiers wrap" id="tiers">
+  <span class="section-label">Plans</span>
+  <h2 class="section-title">One plan. Add exactly what you need.</h2>
+  <p class="section-sub">No tiers to compare — start simple, add depth only where it actually matters for your business.</p>
+
+  <div class="tier-grid">
+
+    <div class="tier-card featured">
+      <div class="tier-name">Starter</div>
+      <div class="tier-price">$800<span>/mo</span></div>
+      <div class="tier-tagline">+ $300 one-time setup</div>
+      <ul class="tier-list">
+        <li><span class="dot">•</span>2 data sources</li>
+        <li><span class="dot">•</span>Monthly dashboard refresh</li>
+        <li><span class="dot">•</span>Full dashboard, unlimited pages</li>
+        <li><span class="dot">•</span>2 custom alerts</li>
+        <li><span class="dot">•</span>Email + phone support</li>
+      </ul>
+      <a href="#contact" class="tier-btn">Get Started</a>
+    </div>
+
+  </div>
+
+  <p style="text-align:center; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--charcoal-soft); margin-top:36px; margin-bottom:0;">Add-Ons — Add Only What You Need</p>
+  <div class="addon-grid">
+    <div class="addon-card">
+      <h4>Extra Data Source</h4>
+      <div class="addon-price">+$100/mo</div>
+      <div class="addon-note">up to 8 total</div>
+    </div>
+    <div class="addon-card">
+      <h4>Extra Custom Alert</h4>
+      <div class="addon-price">+$50/mo</div>
+    </div>
+    <div class="addon-card">
+      <h4>Weekly Refresh</h4>
+      <div class="addon-price">+$50/mo</div>
+      <div class="addon-note">instead of monthly</div>
+    </div>
+    <div class="addon-card">
+      <h4>Data Warehousing</h4>
+      <div class="addon-price">+$200/mo</div>
+      <div class="addon-note">centralized, historized data</div>
+    </div>
+  </div>
+
+  <p style="text-align:center; font-size:14px; font-style:italic; color:var(--charcoal-soft); margin-top:28px;">Monthly 20-minute check-in call — free, any time you want one.</p>
+
+  <div class="foundations-box" style="margin-top:40px;">
+    <div class="foundations-text">
+      <span class="foundations-eyebrow">A one-time option too</span>
+      <h3>Not ready for an ongoing relationship?</h3>
+      <p>A standalone dashboard built from a one-time data export — for due diligence on a business acquisition, a one-off board presentation, or anyone not ready for a live, auto-refreshing pipeline. Sign up for the monthly plan within 60 days and your first month is free — you'd just cover the $300 setup fee.</p>
+    </div>
+    <div class="foundations-price">
+      <span class="amount">$3,500</span>
+      <span class="note">Starting price, one-time</span>
+      <a href="#contact">Ask about a one-time build</a>
+    </div>
+  </div>
+</section>
+
+<section class="dashboards" id="dashboards">
+  <div class="wrap">
+    <span class="section-label">Portfolio</span>
+    <h2 class="section-title">Real dashboards, real businesses.</h2>
+    <p class="section-sub">Every dashboard is built in Microsoft Power BI, connected directly to real data sources, refreshed automatically. Four examples below — click through to see the full case study for each.</p>
+
+    <div class="dash-grid">
+
+      <div class="dash-card">
+        <div class="dash-preview"><img src="images/retail-dashboard.png" alt="Retail Performance Dashboard"></div>
+        <div class="dash-info">
+          <h4>Retail Performance Dashboard</h4>
+          <p>Revenue, profit margin, and order volume at a glance, broken down by month, by category, and by individual product.</p>
+          <a href="https://github.com/SteadfastAnalytics/Retail-Performance-Dashboard" class="dash-case-link" target="_blank">View full case study &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-preview"><img src="images/real-estate-dashboard.png" alt="Real Estate Leads and Regions Dashboard"></div>
+        <div class="dash-info">
+          <h4>Real Estate &mdash; Leads and Regions</h4>
+          <p>Lead spend and cost-per-lead next to closed deals by source, commission by region, and a days-on-market trend.</p>
+          <a href="https://github.com/SteadfastAnalytics/Real-Estate-Dashboard" class="dash-case-link" target="_blank">View full case study &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-preview"><img src="images/service-dashboard.png" alt="Service Business Forecast and Lifetime Value Dashboard"></div>
+        <div class="dash-info">
+          <h4>Service Business &mdash; Forecast and Lifetime Value</h4>
+          <p>Client lifetime value and active engagements alongside a revenue forecast and contract value by service line.</p>
+          <a href="https://github.com/SteadfastAnalytics/Service-Business-Dashboard" class="dash-case-link" target="_blank">View full case study &rarr;</a>
+        </div>
+      </div>
+
+      <div class="dash-card">
+        <div class="dash-preview"><img src="images/subscription-dashboard.png" alt="Subscription Retention and Acquisition Dashboard"></div>
+        <div class="dash-info">
+          <h4>Subscription &mdash; Retention and Acquisition</h4>
+          <p>Churn rate tracked monthly against marketing spend by channel, so acquisition spend is tied directly to retention.</p>
+          <a href="https://github.com/SteadfastAnalytics/Subscription-Business-Dashboard" class="dash-case-link" target="_blank">View full case study &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="contact wrap" id="contact">
+  <div class="contact-grid">
+    <div>
+      <span class="section-label">Get in touch</span>
+      <h2 class="section-title" style="margin-bottom:32px;">Let's find the right plan for your business.</h2>
+
+      <div class="contact-detail">
+        <div class="k">Email</div>
+        <div class="v"><a href="mailto:steadfastbi@gmail.com">steadfastbi@gmail.com</a></div>
+      </div>
+      <div class="contact-detail">
+        <div class="k">Response</div>
+        <div class="v">Within 1 business day</div>
+      </div>
+      <div class="contact-detail">
+        <div class="k">First step</div>
+        <div class="v">A quick email overview, then a free 20-minute video call — no hard sell. Currently booking, with client work starting by December 2026.</div>
+      </div>
+      <div class="contact-detail">
+        <div class="k">Note</div>
+        <div class="v">Direct phone support once you're a client — the number's shared after your intro call.</div>
+      </div>
+    </div>
+
+    <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='Message sent';">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@company.com" required>
+      </div>
+      <div>
+        <label for="plan">Interested in</label>
+        <select id="plan">
+          <option>Starter — $800/mo</option>
+          <option>One-time build — starting at $3,500</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div>
+        <label for="platform">What are you using to track data now?</label>
+        <input id="platform" type="text" placeholder="e.g. Excel spreadsheets, QuickBooks, nothing yet...">
+      </div>
+      <div>
+        <label for="message">What are you hoping to track?</label>
+        <textarea id="message" placeholder="Tell me a bit about your business and what you're looking for..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © 2026 Steadfast Business Analytics. Data solutions & business analytics.
+</footer>
+
+</body>
+</html>
